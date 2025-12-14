@@ -19,6 +19,7 @@ import QuizForm from './pages/quizzes/QuizForm';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
 import NotificationList from './pages/NotificationList';
+import NotFound from './pages/NotFound';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || "YOUR_GOOGLE_CLIENT_ID";
@@ -62,6 +63,9 @@ function App() {
 
             {/* Redirect root to dashboard */}
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
+
+            {/* 404 Page */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </AuthProvider>
