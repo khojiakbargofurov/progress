@@ -48,7 +48,7 @@ const DashboardHome = () => {
                 {/* Bar Chart */}
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border dark:border-gray-700 h-96">
                     <h3 className="text-lg font-bold mb-4 text-gray-800 dark:text-white">Content Overview</h3>
-                    <div className="w-full h-80">
+                    <div className="w-full h-80 min-h-[320px]">
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={data}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.3} />
@@ -69,7 +69,7 @@ const DashboardHome = () => {
                 {user?.role === 'admin' && stats?.userDistribution && (
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border dark:border-gray-700 h-96">
                         <h3 className="text-lg font-bold mb-4 text-gray-800 dark:text-white">User Distribution</h3>
-                        <div className="w-full h-80">
+                        <div className="w-full h-80 min-h-[320px]">
                             <ResponsiveContainer width="100%" height="100%">
                                 <PieChart>
                                     <Pie
